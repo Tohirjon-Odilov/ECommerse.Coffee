@@ -13,18 +13,17 @@ namespace ECommerse.Coffee.Infrastructure.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<Admin> builder)
         {
-            builder.Property("FirstName")
+            builder.Property(p => p.FirstName)
                 .HasMaxLength(25)
                 .IsRequired();
 
-            builder.Property("LastName")
+            builder.Property(p => p.LastName)
                 .HasMaxLength(25)
                 .IsRequired();
 
-            builder.Property("PhoneNumber")
+            builder.Property(p => p.PhoneNumber)
                 .HasMaxLength(15)
                 .IsRequired();
-
 
             builder.HasData(new Admin()
             {
