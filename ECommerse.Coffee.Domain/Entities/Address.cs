@@ -13,6 +13,8 @@ namespace ECommerse.Coffee.Domain.Entities
         public string Region { get; set; }
         public string PostalCode { get; set; }
         public string Street { get; set; }
+        public int HomeNumber { get; set; }
+        public string Description { get; set; }
 
     }
 }
