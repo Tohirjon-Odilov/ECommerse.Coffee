@@ -19,6 +19,7 @@ namespace ECommerse.Coffee.Infrastructure.Persistance.Configurations
                 Name = "Americano",
                 CategoryId = 1,
                 Price = 15000,
+                PicturePath = "",
                 Description = "Haqiyqiy Amerikancha ta'm\nHajm: 600 ml"
             });
         }
