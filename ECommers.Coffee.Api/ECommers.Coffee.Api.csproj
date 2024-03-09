@@ -8,11 +8,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
+    <ProjectReference Include="..\ECommerse.Coffee.Application\ECommerse.Coffee.Application.csproj" />
+    <ProjectReference Include="..\ECommerse.Coffee.Domain\ECommerse.Coffee.Domain.csproj" />
+    <ProjectReference Include="..\ECommerse.Coffee.Infrastructure\ECommerse.Coffee.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
