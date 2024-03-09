@@ -1,9 +1,4 @@
 ﻿using ECommerse.Coffee.Domain.Auditable;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECommerse.Coffee.Domain.Entities
 {
@@ -13,6 +8,8 @@ namespace ECommerse.Coffee.Domain.Entities
         public string Region { get; set; }
         public string PostalCode { get; set; }
         public string Street { get; set; }
+        public int HomeNumber { get; set; }
+        public string Description { get; set; }
 
     }
 }
