@@ -1,9 +1,9 @@
-﻿using ECommerse.Coffee.Domain.Auditable;
+﻿using ECommerse.Coffee.Domain.Entities;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace ECommerse.Coffee.Domain.Entities
+namespace ECommerse.Coffee.Domain.DTOs
 {
-    public class Product : BaseEntity
+    public class ProductDTO
     {
         public string Name { get; set; }
         public int CategoryId { get; set; }
