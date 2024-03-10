@@ -22,6 +22,8 @@ namespace ECommerse.Coffee.Infrastructure.Persistance.Configurations
             builder.Property(p=>p.Description)
                 .IsRequired(false)
                 .HasMaxLength(120);
+            builder.Property(p => p.Login)
+                .IsRequired();
         }
     }
 }

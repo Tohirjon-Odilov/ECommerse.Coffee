@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerse.Coffee.Domain.Entities
 {
-    public class Customer : BaseEntity
+    public class Customer : AudiTable
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
