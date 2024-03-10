@@ -2,7 +2,7 @@
 
 namespace ECommerse.Coffee.Domain.Entities
 {
-    public class Admin : BaseEntity
+    public class Admin : AudiTable
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

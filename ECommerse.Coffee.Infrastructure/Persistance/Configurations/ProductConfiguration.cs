@@ -19,16 +19,6 @@ namespace ECommerse.Coffee.Infrastructure.Persistance.Configurations
             builder.Property(p => p.Description)
                 .HasMaxLength(150);
 
-
-            builder.HasData(new Product()
-            {
-                Id = 1,
-                Name = "Americano",
-                CategoryId = 1,
-                Price = 15000,
-                PicturePath = @"\images\americano.jpg",
-                Description = "Haqiyqiy Amerikancha ta'm\nHajm: 600 ml"
-            });
         }
     }
 }

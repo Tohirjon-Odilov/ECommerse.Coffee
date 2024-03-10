@@ -25,6 +25,8 @@ namespace ECommerse.Coffee.Infrastructure.Persistance.Configurations
             builder.Property(p => p.PhoneNumber)
                 .IsRequired(true)
                 .HasMaxLength(15);
+            builder.Property(p => p.Login)
+                .IsRequired();
         }
     }
 }

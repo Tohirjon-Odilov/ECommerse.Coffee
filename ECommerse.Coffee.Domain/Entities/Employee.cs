@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ECommerse.Coffee.Domain.Entities
 {
-    public class Employee : BaseEntity
+    public class Employee : AudiTable
     {
         public string Name { get; set; }
         public string PhoneNumber { get; set; }
@@ -14,8 +14,7 @@ namespace ECommerse.Coffee.Domain.Entities
         public EmpStatus empStatus { get; set; }
         public int PositionId { get; set; }
         public string Description { get; set; }
-
-
+        
         [ForeignKey(nameof(PositionId))]
         public virtual Role Role { get; set; }
 

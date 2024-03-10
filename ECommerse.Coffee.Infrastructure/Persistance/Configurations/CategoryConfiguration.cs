@@ -16,12 +16,6 @@ namespace ECommerse.Coffee.Infrastructure.Persistance.Configurations
             builder.Property(p => p.Name)
                 .IsRequired()
                 .HasMaxLength(50);
-
-            builder.HasData(new Category()
-            {
-                Id = 1,
-                Name = "Sutli Coffee"
-            });
         }
     }
 }
