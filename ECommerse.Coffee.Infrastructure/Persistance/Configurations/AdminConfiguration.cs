@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ECommerse.Coffee.Infrastructure.Persistance.Configurations
 {
-    public class AdminConfigurations : IEntityTypeConfiguration<Admin>
+    public class AdminConfiguration : IEntityTypeConfiguration<Admin>
     {
         public void Configure(EntityTypeBuilder<Admin> builder)
         {
