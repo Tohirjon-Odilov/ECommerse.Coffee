@@ -1,15 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using ECommerse.Coffee.Application.Abstraction.Repsotitories;
+using ECommerse.Coffee.Domain.Exceptions;
+using ECommerse.Coffee.Infrastructure.Persistance;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace ECommerse.Coffee.Infrastructure.Repository
 {
-    public class BaseRepository <T>:IBaseRepository where T:class 
+    public class BaseRepository<T> : IBaseRepository<T>
+        where T : class
     {
-        private readonly _ _context;
+        private readonly CoffeShopDbContext _context;
         private readonly DbSet<T> _dbSet;
 
-        public BaseRepository(_ context)
+        public BaseRepository(CoffeShopDbContext context)
         {
             _context = context;
             _dbSet = context.Set<T>();
@@ -45,10 +49,11 @@ namespace ECommerse.Coffee.Infrastructure.Repository
         {
             try
             {
-                var result = await _dbSet.FirstOrDefaultAsync(expression);
+                var result = await _dbSet.FirstOrDefaultAsync(expression)
+                    ?? throw new NotFoundException("Not found");
                 return result;
             }
-            catch (Exception ex)
+            catch
             {
                 throw;
             }
